@@ -133,7 +133,7 @@ jobs:
             curl -F "sm=$SMVERSION" -F "key=$UPLOADKEY" -F "drop=@$ARCHIVE" $DROPURL
           fi
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: smrpg-rev${{ env.GITREVCOUNT }}-sm${{ matrix.sm-main-version }}
           path: package
